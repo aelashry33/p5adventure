@@ -1,0 +1,45 @@
+h1, p, h4{
+    font-family: "Segoe UI Light", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
+    "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+h1{
+    font-size: 3em;
+    text-transform: uppercase;
+    color: rgb(90, 2, 90);
+}
+
+h4{
+    color: olive;
+    text-transform: uppercase;
+}
+
+.row {
+    display: flex;
+}
+  
+.column {
+    flex: 63.33%;
+    position: relative;
+    padding: 50px;
+}
+
+.weeks{
+    -webkit-filter: blur(5px); 
+    filter: blur(5px);
+}
+
+.image_text{
+    position: absolute;
+    color: white;
+    top: .7em;
+    left: 1.9em;
+    font-weight: 900;
+    font-size: 6em;
+    text-decoration: none;
+    text-shadow: -1px 0 rgb(90, 2, 90), 0 1px rgb(90, 2, 90), 1px 0 rgb(90, 2, 90), 0 -1px rgb(90, 2, 90);
+}
+
+.image_text:hover{
+    color: olive;
+}
