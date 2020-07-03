@@ -1,3 +1,5 @@
+/** theme is olive and purple **/
+
 @media only screen and (min-width : 300px) and (max-width : 1000px){
     
     .image_text{
@@ -29,13 +31,13 @@ h1{
 }
 
 h4{
-    color: olive;
+    color: rgb(143, 143, 161);
     text-transform: uppercase;
 }
 
 .row {
     display: flex;
-    flex: 63.33%;
+    
     position: relative;
     padding: 10em;
 }
