@@ -1,10 +1,29 @@
+@media only screen and (min-width : 300px) and (max-width : 1000px){
+    
+    .image_text{
+        left:3.7em;
+        font-size: 5.5em;
+        top: 2.7em;
+    }
+}
+
+@media only screen and (min-width : 1000px){
+    
+    .image_text{
+        top: 4.1em;
+        left: 5em;
+        font-weight: 900;
+        font-size: 6em;
+    }
+}
+
 h1, p, h4{
     font-family: "Segoe UI Light", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
     "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 h1{
-    font-size: 3em;
+    font-size: 3.5em;
     text-transform: uppercase;
     color: rgb(90, 2, 90);
 }
@@ -16,13 +35,12 @@ h4{
 
 .row {
     display: flex;
-}
-  
-.column {
     flex: 63.33%;
     position: relative;
-    padding: 50px;
+    padding: 10em;
 }
+  
+
 
 .weeks{
     -webkit-filter: blur(5px); 
@@ -32,10 +50,6 @@ h4{
 .image_text{
     position: absolute;
     color: white;
-    top: .7em;
-    left: 1.9em;
-    font-weight: 900;
-    font-size: 6em;
     text-decoration: none;
     text-shadow: -1px 0 rgb(90, 2, 90), 0 1px rgb(90, 2, 90), 1px 0 rgb(90, 2, 90), 0 -1px rgb(90, 2, 90);
 }
