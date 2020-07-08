@@ -1,13 +1,18 @@
-//instace mode
+//instance mode
 var sketch = function (p) {
   p.setup = function () {
     let can1 = p.createCanvas(300, 500);
     can1.position(40, 350);
+
+    p.textFont("Segoe UI Light");
+    p.fill("olive");
+    p.textSize(25);
+    p.text("GOOGLE LOGOS", 0,20);
   };
 
   p.draw = function () {
     // Code here runs continuously
-    
+
     //Google Maps Logo
     p.noFill();
     p.stroke(133, 130, 130);
@@ -58,8 +63,8 @@ var myp5_1 = new p5(sketch);
 var sketch2 = function (p) {
   let raindrop;
   p.setup = function () {
-    let can1 = p.createCanvas(800, 600);
-    can1.position(400, 350);
+    let can2 = p.createCanvas(800, 600);
+    can2.position(500, 350);
 
     raindrop = p.loadImage("/images/newrain.png");
 
@@ -69,34 +74,45 @@ var sketch2 = function (p) {
 
     p.imageWidth = 30;
     p.imageHeight = 40;
+
+    p.c = 0;
+
+    p.textFont("Segoe UI Light");
+    p.fill("olive");
+    p.textSize(25);
+    p.text("COLOR CHANGING STORM", 0,20);
   };
 
   p.draw = function () {
-    
+    p.colorMode(p.HSB, 360, 100, 100);
 
-    p.fill(169, 169, 169);
+    p.fill(p.c, 30, 30);
+    p.c += 1;
+    p.c = p.c % 330;
+
+
     p.noStroke();
     //cloud 1
-    p.ellipse(60, 50, 100, 100);
-    p.ellipse(130, 50, 200, 100);
-    p.ellipse(80, 90, 100, 100);
-    p.ellipse(150, 90, 100, 100);
-    p.ellipse(200, 90, 100, 100);
-    p.ellipse(200, 50, 100, 100);
-    p.ellipse(240, 60, 100, 100);
+    p.ellipse(60, 100, 100, 100);
+    p.ellipse(130, 100, 200, 100);
+    p.ellipse(80, 120, 100, 100);
+    p.ellipse(150, 120, 100, 100);
+    p.ellipse(200, 120, 100, 100);
+    p.ellipse(200, 80, 100, 100);
+    p.ellipse(240,90, 100, 100);
 
     //cloud 2
-    p.ellipse(380, 50, 200, 100);
-    p.ellipse(400, 100, 100, 100);
-    p.ellipse(320, 90, 100, 100);
-    p.ellipse(460, 90, 100, 100);
-    p.ellipse(500, 70, 100, 100);
+    p.ellipse(380, 80, 200, 100);
+    p.ellipse(400, 130, 100, 100);
+    p.ellipse(320, 120, 100, 100);
+    p.ellipse(460, 120, 100, 100);
+    p.ellipse(500, 100, 100, 100);
 
     //cloud 3
-    p.ellipse(580, 60, 150, 100);
-    p.ellipse(560, 90, 100, 100);
-    p.ellipse(630, 90, 100, 100);
-    p.ellipse(650, 70, 100, 100);
+    p.ellipse(580, 90, 150, 100);
+    p.ellipse(560, 120, 100, 100);
+    p.ellipse(630, 120, 100, 100);
+    p.ellipse(650, 100, 100, 100);
 
 
     p.noFill();
@@ -128,7 +144,117 @@ var sketch2 = function (p) {
 var myp5_2 = new p5(sketch2);
 
 
+let sketch3 = function (p) {
+  let green, red, yellow, violet, blue, darkBlue, purple, forestGreen, lineColor;
+
+  p.setup = function() {
+    let can3 = p.createCanvas(900, 600);
+    can3.position(40, 1100);
+
+    p.colorMode(p.HSB, 360, 100, 100);
+    p.backgroundColor = p.color(98);
+    p.lineColor = p.color(10);
+
+    p.green = p.color(90, 50, 80);
+    p.violet = p.color(270, 50, 80);
+    p.blue = p.color(180, 50, 80);
+    p.forestGreen = p.color(150, 50, 80);
+    p.darkBlue = p.color(200, 200, 80);
+    p.purple = p.color(300, 50, 80);
+    p.red = p.color(0, 50, 80);
+    p.yellow = p.color(40, 50, 80);
+
+    p.textFont("Segoe UI Light");
+    p.fill("olive");
+    p.textSize(25);
+    p.text("PAINTING ON THE SCREEN", 0,20);
 
 
+    p.textFont("Courier");
+    p.fill(50);
+    p.text("PICK A COLOR AND DRAG ON THE SCREEN TO PAINT", 230, 60);
+
+  }
+
+  //paint app, pick a color, paint with it them 
+  p.draw = function() {
+    //background(backgroundColor);
+    p.noStroke();
+    p.drawPalette();
+    p.pickColor();
+
+    p.strokeWeight(10);
+    p.stroke(p.lineColor);
+    if (p.mouseIsPressed) {
+      p.line(p.mouseX, p.mouseY, p.pmouseX, p.pmouseY);
+    }
+
+  }
+
+  p.drawPalette = function() {
+    //palette
+    p.fill(40, 10, 100); //beige
+    p.rect(p.width / 10, 30, 50, 1000, 10);
 
 
+    p.fill(p.green); //green
+    p.ellipse(115, 50, 30);
+
+    p.fill(p.violet);//violet
+    p.ellipse(115, 400, 30);
+
+
+    p.fill(p.blue); //blue
+    p.ellipse(115, 190, 30);
+
+    p.fill(p.red); //red
+    p.ellipse(115, 470, 30);
+
+
+    p.fill(p.yellow); //yellow
+    p.ellipse(115, 540, 30);
+
+    p.fill(p.purple); //purple
+    p.ellipse(115, 330, 30);
+
+
+    p.fill(p.forestGreen); //forest green
+    p.ellipse(115, 120, 30);
+
+    p.fill(p.darkBlue); //dark blue
+    p.ellipse(115, 260, 30);
+  }
+
+  p.pickColor = function() {
+    if (p.mouseIsPressed && p.mouseX >= 100 && p.mouseX <= 120) {
+      if (p.mouseY >= 0 && p.mouseY <= 70) {
+        p.lineColor = p.green;
+      }
+      if (p.mouseY >= 100 && p.mouseY <= 140) {
+        p.lineColor = p.forestGreen;
+      }
+      if (p.mouseY >= 160 && p.mouseY <= 210) {
+        p.lineColor = p.blue;
+      }
+      if (p.mouseY >= 230 && p.mouseY <= 270) {
+        p.lineColor = p.darkBlue;
+      }
+      if (p.mouseY >= 310 && p.mouseY <= 340) {
+        p.lineColor = p.purple;
+      }
+      if (p.mouseY >= 380 && p.mouseY <= 410) {
+        p.lineColor = p.violet;
+      }
+      if (p.mouseY >= 450 && p.mouseY <= 480) {
+        p.lineColor = p.red;
+      }
+      if (p.mouseY >= 520 && p.mouseY <= 550) {
+        p.lineColor = p.yellow;
+      }
+    }
+  }
+
+}
+
+
+var myp5_3 = new p5(sketch3);
