@@ -79,10 +79,7 @@ h2{
     color: olive;
 }
 
-.left{
-    float: left;
-}
-
-.right{
-    float: right;
+.left_label{
+    display: flex;
+    
 }
