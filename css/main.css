@@ -62,8 +62,6 @@ h2{
     position: relative;
     padding: 10em;
 }
-  
-
 
 .weeks{
     -webkit-filter: blur(5px); 
@@ -79,4 +77,12 @@ h2{
 
 .image_text:hover, h2{
     color: olive;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
 }
