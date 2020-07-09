@@ -4,7 +4,7 @@ var sketch = function (p) {
     let can1 = p.createCanvas(300, 500);
     can1.position(40, 350);
 
-    p.textFont("Segoe UI Light");
+    p.textFont("arial");
     p.fill("olive");
     p.textSize(25);
     p.text("GOOGLE LOGOS", 0,20);
@@ -63,8 +63,8 @@ var myp5_1 = new p5(sketch);
 var sketch2 = function (p) {
   let raindrop;
   p.setup = function () {
-    let can2 = p.createCanvas(800, 600);
-    can2.position(500, 350);
+    let can2 = p.createCanvas(600, 600);
+    can2.position(350, 350);
 
     raindrop = p.loadImage("/images/newrain.png");
 
@@ -77,7 +77,7 @@ var sketch2 = function (p) {
 
     p.c = 0;
 
-    p.textFont("Segoe UI Light");
+    p.textFont("arial");
     p.fill("olive");
     p.textSize(25);
     p.text("COLOR CHANGING STORM", 0,20);
@@ -109,10 +109,9 @@ var sketch2 = function (p) {
     p.ellipse(500, 100, 100, 100);
 
     //cloud 3
-    p.ellipse(580, 90, 150, 100);
-    p.ellipse(560, 120, 100, 100);
-    p.ellipse(630, 120, 100, 100);
-    p.ellipse(650, 100, 100, 100);
+    p.ellipse(520, 90, 150, 70);
+    //p.ellipse(560, 120, 100, 100);
+    
 
 
     p.noFill();
@@ -164,7 +163,7 @@ let sketch3 = function (p) {
     p.red = p.color(0, 50, 80);
     p.yellow = p.color(40, 50, 80);
 
-    p.textFont("Segoe UI Light");
+    p.textFont("arial");
     p.fill("olive");
     p.textSize(25);
     p.text("PAINTING ON THE SCREEN", 0,20);
