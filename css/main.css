@@ -54,7 +54,7 @@ h4, h2, ul{
 }
 
 h2{
-    font-size: 1.3em;
+    font-size: 2em;
 }
 
 .row {
@@ -79,7 +79,7 @@ h2{
     color: olive;
 }
 
-.left_label{
-    display: flex;
-    
+.link_label{
+    margin-left: 2em;
+    font-size: 1.5em;
 }
