@@ -94,9 +94,15 @@ h2{
     color: olive;
 }
 
-.codeDisplay{
-    float: right;
-    background-color: white;
-    border-color: black;
+.gist {
+    width:50em;
+    margin-top: 50em;
+    margin-left: 7em;
+}
+.gist-file
+
+.gist-data {
+    max-height: 20em; 
+    max-width: 50em;
 }
 
