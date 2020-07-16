@@ -1,8 +1,8 @@
 let drops, droplets, dropAmount, grassPatch, grassAmount;
 
 function setup() {
-  createCanvas(700, 700);
-  
+  let can6 = createCanvas(700, 700);
+  can6.position(0, 300);
   colorMode(HSB, 360, 100, 100);
   
   drops = [];

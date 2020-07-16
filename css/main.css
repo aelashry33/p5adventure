@@ -93,3 +93,10 @@ h2{
 .js_headings{
     color: olive;
 }
+
+.codeDisplay{
+    float: right;
+    background-color: white;
+    border-color: black;
+}
+
