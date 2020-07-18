@@ -12,6 +12,7 @@ function setup() {
     clear = createButton("press to clear");
     clear.position(width-100,height-200);
 
+    //setting colors
     green = color(90, 50, 80);
     violet = color(270, 50, 80);
     blue = color(180, 50, 80);
@@ -28,7 +29,7 @@ function setup() {
     
 }
 
-//paint app, pick a color, paint with it them 
+//pick a color, paint with it 
 function draw() {
     
     noStroke();
@@ -38,20 +39,24 @@ function draw() {
 
     strokeWeight(10);
     stroke(lineColor);
+
+    //draws on canvas when mouse dragged/held down
     if (mouseIsPressed) {
         line(mouseX, mouseY, pmouseX, pmouseY);
     }
 
 }
+
+//ensures the text stays when key is pressed and not overwritten by the draw function
 function keyPressed(){
     background(99);
     noStroke();
     textSize(25);
     textFont("Courier");
     fill(50);
-    text("PICK A COLOR AND DRAG ON THE SCREEN TO PAINT", width- 700, height- 540);
-    
+    text("PICK A COLOR AND DRAG ON THE SCREEN TO PAINT", width- 700, height- 540); 
 }
+
 function drawPalette() {
     //palette
     fill(40, 10, 100); //beige
@@ -86,6 +91,7 @@ function drawPalette() {
     ellipse(115, 260, 30);
 }
 
+//if mouse is pressed over any of these coordinates, the correct color is choosen
 function pickColor() {
     if (mouseIsPressed && mouseX >= width - 800 && mouseX <= width - 780) {
         if (mouseY >= 0 && mouseY <= height - 530) {

@@ -8,6 +8,7 @@ function setup() {
 
     writeText();
 
+    //creating buttons for each stroke size
     clear = createButton("press to clear");
     clear.position(width - 150, height - 260);
 
@@ -35,6 +36,7 @@ function setup() {
 
 
 function draw() {
+    //event lisenters for every button
     clear.mousePressed(keyPressed);
     normal.mousePressed(normalChange);
     bold.mousePressed(boldChange);
@@ -44,6 +46,8 @@ function draw() {
 
 
     strokeWeight(strokeSize);
+
+    //drawing on the canvas when mouse is held down
     if (mouseIsPressed && mouseX > width - 480) {
         chooseColors();
         line(mouseX, mouseY, pmouseX, pmouseY);
@@ -51,16 +55,17 @@ function draw() {
 
 }
 
-
+//generating the rainbow effect for the stroke
 function chooseColors() {
     brushHue = (brushHue + 1) % 360;
     stroke(brushHue, 50, 80);
 }
 
+
+//all of the functions below change the stroke size when called
 function normalChange() {
     strokeSize = 5;
     chooseColors();
-
 }
 
 function boldChange() {
@@ -87,6 +92,7 @@ function decreaseChange() {
     chooseColors();
 }
 
+//clears the screen when clear button is pressed or any key is pressed
 function keyPressed() {
     background(100);
     writeText();

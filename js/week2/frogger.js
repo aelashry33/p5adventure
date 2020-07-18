@@ -40,7 +40,6 @@ function setup() {
   rectColor3 = color(270, 80, 80);
   rectColor4 = color(330, 80, 80);
   
-  
 }
 
 function draw() {
@@ -176,6 +175,7 @@ function displayScores() {
 }
 
 function gameOver(displayString){
+  //stops movement of obstacles
   if(gameIsOver){
     car1X = 0;
     car1Y = 100;

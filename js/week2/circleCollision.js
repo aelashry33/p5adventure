@@ -3,7 +3,7 @@ let brushHue, backgroundColor, coinX, coinY, score, time, gameIsOver, hit, amoun
 function setup() {
   // Canvas & color settings
   let can5 = createCanvas(700, 500);
-  can5.position(200, 400);
+  can5.position(100, 400);
 
   
 
@@ -14,13 +14,13 @@ function setup() {
   restart = createButton("RESTART GAME");
   restart.position(500, 800);
 
+  //arrays to hold x and y coordinates of the coins
   coinX = [];
   coinY = [];
   time = 1000;
   gameIsOver = false;
   score = 0;
   amount = 20;
-  
   
 }
 
@@ -30,8 +30,10 @@ function draw() {
   fill(300, 30, 100);
   
   handleTime();
+  //draws coins on the screen
   populateCoins();
   
+  //checks for collisions between the black coin and the purple coins
   for(let i =0; i <amount; i++){
     if(collideCircleCircle(mouseX, mouseY, 20, coinX[i], coinY[i], 20) ){
       handleCollision();
@@ -49,6 +51,7 @@ function draw() {
 }
 
 function populateCoins(){
+  //draws coins on the screen
   coinX.push(random(width));
   coinY.push(random(height));
   
@@ -59,6 +62,7 @@ function populateCoins(){
 }
 
 function resetGame(){
+  //resets variables that were changed in the game
   backgroundColor = 100;
   time = 1000;
   score = 0;
@@ -68,7 +72,7 @@ function resetGame(){
 }
 
 function handleCollision() {
-  // We'll write code for what happens if your character hits a coin.
+  // if coin is hit, score increments and coin move to another location
   if(!gameIsOver){
     score++;
     for(let i =0; i < amount; i++){
@@ -80,7 +84,7 @@ function handleCollision() {
 }
 
 function handleTime() {
-  // We'll write code to handle the time.
+  //handles the time.
   if(time > 0){
     time--;
     return; //exits the function

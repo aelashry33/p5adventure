@@ -11,6 +11,7 @@ function setup() {
 
     textSize(60);
 
+    //main circle position
     circleX = width - 460;
     circleY = height - 470;
 
@@ -32,6 +33,7 @@ function draw() {
     collectPoints();
 }
 
+//movement of ball through the maze
 function keyPressed() {
     loop();
     if (keyCode == UP_ARROW) {
@@ -53,6 +55,7 @@ function keyPressed() {
     }
 }
 
+//drawing the blue target points on the map
 function drawPoints() {
     stroke(98);
     fill(pointColor);
@@ -78,6 +81,8 @@ function drawPoints() {
     }
 }
 
+//if dot collides with target the point score increments 
+//disclaimer: this was done before I knew about the collide.2d library
 function collectPoints() {
     for (let i = 470; i > 360; i -= 50) {
         if (

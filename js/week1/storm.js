@@ -7,6 +7,7 @@ function setup() {
 
     raindrop = loadImage("/images/newrain.png");
 
+    //movement of the raindrops
     y = 150;
     mainVel = 2;
     yVel = mainVel;
@@ -15,13 +16,12 @@ function setup() {
     imageHeight = 40;
 
     c = 0;
-
-   
 };
 
 function draw() {
     colorMode(HSB, 360, 100, 100);
 
+    //changes color of the clouds
     fill(c, 30, 30);
     c += 1;
     c = c % 330;
@@ -46,9 +46,6 @@ function draw() {
 
     //cloud 3
     ellipse(520, 90, 150, 70);
-    //ellipse(560, 120, 100, 100);
-
-
 
     noFill();
     //raindrops
@@ -63,8 +60,7 @@ function draw() {
         image(raindrop, i + 90, y + 360, imageWidth, imageHeight);
         image(raindrop, i + 40, y + 420, imageWidth, imageHeight);
     }
-
-
+    
     //raindrop motion
     if (y < 100) {
         yVel = mainVel;

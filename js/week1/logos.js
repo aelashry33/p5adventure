@@ -2,8 +2,6 @@
 function setup() {
   let can1 = createCanvas(300, 600);
   can1.position(300, 350);
-
-  
 };
 
 function draw() {
