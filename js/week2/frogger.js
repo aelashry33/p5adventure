@@ -3,7 +3,7 @@ let backgroundColor, frogColor, frogSize, frogX, frogY, score, lives, gameIsOver
 
 function setup() {
   // Canvas & color settings
-  let can6 = createCanvas(600, 500);
+  let can6 = createCanvas(600, 550);
   can6.position(40, 520);
   colorMode(HSB, 360, 100, 100);
   backgroundColor = 100;

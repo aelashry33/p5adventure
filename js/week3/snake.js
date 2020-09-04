@@ -3,7 +3,7 @@ let backgroundColor, playerSnake, currentApple, score;
 function setup() {
     // Canvas & color settings
     let can10 = createCanvas(700, 700);
-    can10.position(130, 440);
+    can10.position(130, 480);
     colorMode(HSB, 360, 100, 100);
     backgroundColor = 95;
     frameRate(12);

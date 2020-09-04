@@ -3,20 +3,28 @@
 @media only screen and (min-width : 300px) and (max-width : 1000px){
     
     .image_text{
-        left:3.7em;
-        font-size: 5.5em;
-        top: 2.7em;
+        left:6.5em;
+        font-size: 3.5em;
+        top: .7em;
+    }
+
+    .js_descriptions{
+        font-size: .7em;
     }
 }
 
 @media only screen and (min-width : 1000px){
     
     .image_text{
-        top: 4.1em;
-        left: 5em;
+        left: 4.5em;
         font-weight: 900;
         font-size: 6em;
+        z-index: 1;
     }
+}
+
+img{
+    z-index: -1;
 }
 
 ul {
@@ -60,7 +68,10 @@ h2{
 .row {
     display: flex;
     position: relative;
-    padding: 10em;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2em;
 }
 
 .weeks{
@@ -94,9 +105,24 @@ h2{
     color: olive;
 }
 
+.capstone{
+    font-size: 3em;
+    text-align: center;
+    color: olive;
+}
+
+.capstonegit{
+    text-align: center;
+    color: olive;
+}
+
+.projectredirect{
+    text-align: center;
+}
+/*for the code hosting from github for each project*/
 .gist {
     width:50em;
-    margin-top: 50em;
+    margin-top: 60em;
     margin-left: 7em;
 }
 .gist-file
