@@ -57,8 +57,23 @@ h1{
 }
 
 h4, h2, ul{
-    color: rgb(143, 143, 161);
+    color: grey;
     text-transform: uppercase;
+}
+
+.intro{
+    color: rgb(90, 2, 90);
+    text-align: center;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+.lowercase{
+    text-transform: lowercase;
+}
+
+ul{
+    background-color: #EEE8AA; 
 }
 
 h2{
@@ -67,11 +82,13 @@ h2{
 
 .row {
     display: flex;
-    position: relative;
+    position: static;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    margin: 2em;
+    flex-direction: column;
+    margin-left: 25em;
+    margin-right: 25em;
+    text-align: center;
+    background-color: #EEE8AA;
 }
 
 .weeks{
@@ -80,10 +97,9 @@ h2{
 }
 
 .image_text{
-    position: absolute;
-    color: white;
-    text-decoration: none;
-    text-shadow: -1px 0 rgb(90, 2, 90), 0 1px rgb(90, 2, 90), 1px 0 rgb(90, 2, 90), 0 -1px rgb(90, 2, 90);
+    color: rgb(90, 2, 90);
+    
+    font-size: 3em;
 }
 
 .image_text:hover, h2{
@@ -106,19 +122,23 @@ h2{
 }
 
 .capstone{
-    font-size: 3em;
+    font-size: 3.3em;
+    font-weight: bold;
     text-align: center;
     color: olive;
 }
 
 .capstonegit{
     text-align: center;
+    font-weight: bold;
     color: olive;
 }
 
 .projectredirect{
-    text-align: center;
+    text-align: left;
+    text-transform: lowercase;
 }
+
 /*for the code hosting from github for each project*/
 .gist {
     width:50em;
